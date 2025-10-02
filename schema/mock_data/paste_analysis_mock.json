@@ -1,0 +1,13 @@
+{
+  "suspicion_percentage": 87.5,
+  "factor_scores": {
+    "length": 15.0,
+    "is_code": 25.0,
+    "has_comments": 10.0,
+    "ai_markers": 20.0,
+    "code_density": 12.5,
+    "excessive_blanks": 0.0,
+    "non_code_text": 5.0
+  },
+  "is_likely_code_flag": true
+} 

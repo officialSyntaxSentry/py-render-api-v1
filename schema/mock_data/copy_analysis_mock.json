@@ -1,0 +1,20 @@
+{
+  "username": "john_doe_2024",
+  "problemName": "two-sum",
+  "problemTitle": "Two Sum",
+  "timestamp_ms": 1704067200000,
+  "copied_text_preview": "def twoSum(self, nums: List[int], target: int) -> List[int]:\n    \"\"\"\n    Given an array of integers nums and an integer target, return indices of the two numbers\n    such that they add up to target...",
+  "content_length": 342,
+  "source_hostname": "leetcode.com",
+  "suspicion_score": 45,
+  "max_possible_score": 100,
+  "suspicion_percentage": 45.0,
+  "suspicion_level": "Medium",
+  "reasons": [
+    "Long content copied (342 chars)",
+    "Code keywords detected: function definitions, type hints, and algorithmic patterns found.",
+    "Code structure patterns identified: proper indentation, docstrings, and method signatures.",
+    "Specific solution keywords found: 'algorithm', 'optimal', 'time complexity' suggesting solution-oriented content.",
+    "Copied from leetcode.com (problem page: /problems/two-sum/description/) - domain not flagged as suspicious."
+  ]
+} 

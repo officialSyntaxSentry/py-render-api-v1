@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Java Code Analysis Output",
+  "description": "Schema for AI output from Java code analysis (java.py)",
+  "type": "object",
+  "properties": {
+    "suspicious_percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Estimated likelihood (0-100) the code is AI-generated"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of strings explaining the factors contributing to the score"
+    },
+    "factors": {
+      "type": "object",
+      "properties": {
+        "comments": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Score (0-1) for comment analysis"
+        },
+        "formatting": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Score (0-1) for formatting analysis"
+        },
+        "naming": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Score (0-1) for naming convention analysis"
+        },
+        "structure": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Score (0-1) for structural analysis"
+        }
+      },
+      "required": ["comments", "formatting", "naming", "structure"],
+      "additionalProperties": false,
+      "description": "Scores (0-1) for each analysis category"
+    },
+    "detailed_metrics": {
+      "type": "object",
+      "properties": {
+        "comments": {
+          "type": "object",
+          "description": "Raw metrics collected during comment analysis"
+        },
+        "formatting": {
+          "type": "object",
+          "description": "Raw metrics collected during formatting analysis"
+        },
+        "naming": {
+          "type": "object",
+          "description": "Raw metrics collected during naming analysis"
+        },
+        "structure": {
+          "type": "object",
+          "description": "Raw metrics collected during structure analysis"
+        }
+      },
+      "required": ["comments", "formatting", "naming", "structure"],
+      "additionalProperties": false,
+      "description": "Raw metrics collected during analysis"
+    }
+  },
+  "required": ["suspicious_percentage", "reasons", "factors", "detailed_metrics"],
+  "additionalProperties": false
+} 

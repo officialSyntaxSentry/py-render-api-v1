@@ -1,0 +1,27 @@
+{
+  "document_id": "67e58bd911f5e4a410748e31",
+  "username": "alice_smith",
+  "problem_id": "1",
+  "problem_title": "Two Sum",
+  "platform": "LeetCode",
+  "timestamp": "2024-01-01T12:00:00.000Z",
+  "suspicion_percentage": 85,
+  "raw_score": 17,
+  "max_possible_score": 20,
+  "reasons": [
+    "Switched TO AI Domain: chatgpt.com",
+    "Switched TO Search Engine (google.com) with relevant keyword: 'two sum leetcode solution'",
+    "Switched TO GitHub repository: https://github.com/user/leetcode-solutions",
+    "Switched FROM potential Solution Domain: geeksforgeeks.org"
+  ],
+  "details": {
+    "from": {
+      "url": "https://leetcode.com/problems/two-sum/",
+      "title": "Two Sum - LeetCode"
+    },
+    "to": {
+      "url": "https://chat.openai.com/",
+      "title": "ChatGPT"
+    }
+  }
+} 

@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Copy Event Analysis Output",
+  "description": "Schema for AI output from copy event analysis (copymain.py)",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "description": "Username associated with the copy event"
+    },
+    "problemName": {
+      "type": "string",
+      "description": "Name of the problem being worked on"
+    },
+    "problemTitle": {
+      "type": "string",
+      "description": "Title of the problem being worked on"
+    },
+    "timestamp_ms": {
+      "type": ["number", "null"],
+      "description": "Timestamp of the event in milliseconds"
+    },
+    "copied_text_preview": {
+      "type": "string",
+      "description": "Preview of the copied text (truncated if long)"
+    },
+    "content_length": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Length of the copied content in characters"
+    },
+    "source_hostname": {
+      "type": ["string", "null"],
+      "description": "Hostname of the source where content was copied from"
+    },
+    "suspicion_score": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Raw suspicion score before percentage calculation"
+    },
+    "max_possible_score": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Maximum possible suspicion score"
+    },
+    "suspicion_percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Percentage likelihood that the copy event is suspicious (0-100)"
+    },
+    "suspicion_level": {
+      "type": "string",
+      "enum": ["Low", "Medium", "High", "Very High"],
+      "description": "Categorical suspicion level"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of reasons explaining the suspicion score"
+    }
+  },
+  "required": [
+    "username", 
+    "problemName", 
+    "problemTitle", 
+    "copied_text_preview", 
+    "content_length", 
+    "suspicion_score", 
+    "max_possible_score", 
+    "suspicion_percentage", 
+    "suspicion_level", 
+    "reasons"
+  ],
+  "additionalProperties": false
+} 

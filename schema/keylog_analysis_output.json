@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Keylog Analysis Output",
+  "description": "Schema for AI output from keylog analysis (keymain.py)",
+  "type": "object",
+  "properties": {
+    "suspicious_percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Overall suspicion score (0-100)"
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+        "total_key_presses": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total number of key presses recorded"
+        },
+        "analyzed_intervals": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Number of inter-key intervals analyzed"
+        },
+        "rapid_paste_ctrl_v_count": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Number of rapid Ctrl+V paste events detected"
+        },
+        "rapid_paste_ctrl_v_timestamps": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "Timestamps of rapid Ctrl+V paste events"
+        },
+        "multiple_rapid_paste_sequences": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Number of multiple rapid paste sequences"
+        },
+        "paste_burst_count": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Number of paste burst events detected"
+        },
+        "paste_burst_timestamps": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "Timestamps of paste burst events"
+        },
+        "fast_typing_percentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of extremely fast typing intervals"
+        },
+        "long_gap_percentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of long gap intervals"
+        },
+        "score_contribution": {
+          "type": "object",
+          "properties": {
+            "rapid_paste": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Score contribution from rapid paste detection"
+            },
+            "multiple_rapid_paste": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Score contribution from multiple rapid paste sequences"
+            },
+            "fast_typing": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Score contribution from fast typing detection"
+            },
+            "long_gaps": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Score contribution from long gap detection"
+            }
+          },
+          "required": ["rapid_paste", "multiple_rapid_paste", "fast_typing", "long_gaps"],
+          "additionalProperties": false,
+          "description": "Breakdown of score contributions by factor"
+        }
+      },
+      "required": [
+        "total_key_presses",
+        "analyzed_intervals", 
+        "rapid_paste_ctrl_v_count",
+        "rapid_paste_ctrl_v_timestamps",
+        "multiple_rapid_paste_sequences",
+        "paste_burst_count",
+        "paste_burst_timestamps",
+        "fast_typing_percentage",
+        "long_gap_percentage",
+        "score_contribution"
+      ],
+      "additionalProperties": false,
+      "description": "Detailed analysis results and metrics"
+    },
+    "error": {
+      "type": ["string", "null"],
+      "description": "Error message if analysis could not be performed, null otherwise"
+    }
+  },
+  "required": ["suspicious_percentage", "details", "error"],
+  "additionalProperties": false
+} 

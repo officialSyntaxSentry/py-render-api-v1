@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "C++ Code Analysis Output",
+  "description": "Schema for AI output from C++ code analysis (cpp.py)",
+  "type": "object",
+  "properties": {
+    "suspiciousness_percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "0-100 likelihood estimate that the code is AI-generated"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of strings explaining suspicious findings"
+    },
+    "factor_scores": {
+      "type": "object",
+      "description": "Detailed scores for each analysis factor",
+      "patternProperties": {
+        "^[a-zA-Z_][a-zA-Z0-9_]*$": {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Score value for this factor"
+            },
+            "details": {
+              "type": "string",
+              "description": "Details about this factor's analysis"
+            }
+          },
+          "required": ["score"],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["suspiciousness_percentage", "reasons", "factor_scores"],
+  "additionalProperties": false
+} 

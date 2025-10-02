@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JavaScript Code Analysis Output",
+  "description": "Schema for AI output from JavaScript code analysis (javascript.py)",
+  "type": "object",
+  "properties": {
+    "suspicious_percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Percentage likelihood that the code is AI-generated (0-100)"
+    },
+    "detailed_justification": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of detailed explanations for the analysis results"
+    },
+    "pattern_analysis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of detected patterns that influenced the analysis"
+    }
+  },
+  "required": ["suspicious_percentage", "detailed_justification", "pattern_analysis"],
+  "additionalProperties": false
+} 

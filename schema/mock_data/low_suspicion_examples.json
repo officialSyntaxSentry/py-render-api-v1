@@ -1,0 +1,93 @@
+{
+  "python_low_suspicion": {
+    "suspicious_percentage": 23.1,
+    "detailed_justification": "Overall Assessment: Likely human-written. Exhibits primarily human-like coding patterns.\n[COMMENTS]: Found 3 commented-out print statements, strong indicator of human debugging.\n[FORMATTING]: Some inconsistent spacing and minor PEP8 violations typical of human coding.\n[NAMING]: Mix of naming styles including some single-letter variables in loops.\n[PATTERNS_STRUCTURE]: Detected 2 large commented-out code blocks, likely human experimentation or legacy code.\n[DEBUG] Raw Score: 8.12",
+    "pattern_analysis": [
+      "Presence of commented-out debug prints",
+      "Large commented-out code blocks found",
+      "Inconsistent formatting patterns",
+      "Mixed naming conventions",
+      "Low docstring coverage"
+    ]
+  },
+  "java_low_suspicion": {
+    "suspicious_percentage": 18.7,
+    "reasons": [
+      "Low docstring coverage for functions/classes, more typical of human contest code.",
+      "Inconsistent indentation patterns detected.",
+      "Variable naming shows human-like inconsistencies.",
+      "No specific indicators found; analysis inconclusive based on heuristics."
+    ],
+    "factors": {
+      "comments": 0.15,
+      "formatting": 0.25,
+      "naming": 0.18,
+      "structure": 0.12
+    },
+    "detailed_metrics": {
+      "comments": {
+        "total_comments": 3,
+        "single_line_comments": 2,
+        "multi_line_comments": 1,
+        "comment_density": 0.08
+      },
+      "formatting": {
+        "indentation_consistency": 0.65,
+        "line_length_variance": 0.45
+      },
+      "naming": {
+        "generic_name_ratio": 0.12
+      },
+      "structure": {
+        "consecutive_duplicate_lines": 0,
+        "magic_number_ratio": 0.015
+      }
+    }
+  },
+  "keylog_low_suspicion": {
+    "suspicious_percentage": 12.5,
+    "details": {
+      "total_key_presses": 892,
+      "analyzed_intervals": 891,
+      "rapid_paste_ctrl_v_count": 1,
+      "rapid_paste_ctrl_v_timestamps": [1704067201234],
+      "multiple_rapid_paste_sequences": 0,
+      "paste_burst_count": 2,
+      "paste_burst_timestamps": [1704067201000, 1704067205000],
+      "fast_typing_percentage": 5.2,
+      "long_gap_percentage": 8.7,
+      "score_contribution": {
+        "rapid_paste": 5.0,
+        "multiple_rapid_paste": 0.0,
+        "fast_typing": 4.2,
+        "long_gaps": 3.3
+      }
+    },
+    "error": null
+  },
+  "tab_low_suspicion": {
+    "document_id": "67e58bd911f5e4a410748e32",
+    "username": "bob_wilson",
+    "problem_id": "2",
+    "problem_title": "Add Two Numbers",
+    "platform": "LeetCode",
+    "timestamp": "2024-01-01T14:30:00.000Z",
+    "suspicion_percentage": 15,
+    "raw_score": 3,
+    "max_possible_score": 20,
+    "reasons": [
+      "Navigated within platform (leetcode.com).",
+      "No suspicious activity detected in this switch."
+    ],
+    "details": {
+      "from": {
+        "url": "https://leetcode.com/problems/add-two-numbers/",
+        "title": "Add Two Numbers - LeetCode"
+      },
+      "to": {
+        "url": "https://leetcode.com/problems/add-two-numbers/discuss/",
+        "title": "Add Two Numbers Discussion - LeetCode"
+      }
+    }
+  }
+} 

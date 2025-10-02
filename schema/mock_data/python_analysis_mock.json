@@ -1,0 +1,14 @@
+{
+  "suspicious_percentage": 78.5,
+  "detailed_justification": "Overall Assessment: High likelihood of AI generation based on multiple strong indicators.\n[COMMENTS]: Excessive use of explanatory comments (12 comments for 45 lines of code), typical AI verbosity.\n[FORMATTING]: Perfect PEP8 adherence with consistent 4-space indentation and proper spacing.\n[NAMING]: All variable names follow perfect snake_case convention with descriptive names like 'user_input_validator' and 'processed_data_list'.\n[COMPLEXITY]: Code uses unnecessarily complex list comprehensions where simple loops would suffice.\n[ADVANCED_CONSTRUCTS]: Heavy use of type hints and docstrings for a simple script, suggesting AI generation.\n[PATTERNS_STRUCTURE]: High docstring coverage (100%) including module docstring, common in AI-generated code.\n[DEBUG] Raw Score: 23.45",
+  "pattern_analysis": [
+    "Excessive explanatory comments",
+    "Perfect PEP8 formatting adherence",
+    "Consistent naming conventions",
+    "High docstring coverage",
+    "Presence of module docstring",
+    "Use of type hints in simple script",
+    "Overly descriptive variable names",
+    "Complex constructs for simple tasks"
+  ]
+} 

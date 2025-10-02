@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Python Code Analysis Output",
+  "description": "Schema for AI output from Python code analysis (py.py)",
+  "type": "object",
+  "properties": {
+    "suspicious_percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Percentage likelihood that the code is AI-generated (0-100)"
+    },
+    "detailed_justification": {
+      "type": "string",
+      "description": "Detailed explanation of the analysis results with line-separated justifications"
+    },
+    "pattern_analysis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of detected patterns that influenced the analysis"
+    }
+  },
+  "required": ["suspicious_percentage", "detailed_justification", "pattern_analysis"],
+  "additionalProperties": false
+} 

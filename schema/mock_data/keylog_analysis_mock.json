@@ -1,0 +1,42 @@
+{
+  "suspicious_percentage": 92.3,
+  "details": {
+    "total_key_presses": 1247,
+    "analyzed_intervals": 1246,
+    "rapid_paste_ctrl_v_count": 7,
+    "rapid_paste_ctrl_v_timestamps": [
+      1704067201234,
+      1704067205678,
+      1704067209012,
+      1704067212345,
+      1704067215678,
+      1704067219012,
+      1704067222345
+    ],
+    "multiple_rapid_paste_sequences": 3,
+    "paste_burst_count": 12,
+    "paste_burst_timestamps": [
+      1704067201000,
+      1704067201500,
+      1704067202000,
+      1704067205500,
+      1704067206000,
+      1704067206500,
+      1704067209000,
+      1704067209500,
+      1704067210000,
+      1704067212000,
+      1704067212500,
+      1704067213000
+    ],
+    "fast_typing_percentage": 23.7,
+    "long_gap_percentage": 15.2,
+    "score_contribution": {
+      "rapid_paste": 35.0,
+      "multiple_rapid_paste": 15.0,
+      "fast_typing": 28.5,
+      "long_gaps": 13.8
+    }
+  },
+  "error": null
+} 

@@ -1,0 +1,54 @@
+
+{
+    "script_name": "cpp.py",
+    "object_id": "67f559c9dfb01510b8393ffd",
+    "suspiciousness_percentage": 33.5,
+    "reasons": [
+      "Inconsistent spacing around operators found in ~100.0% of relevant lines.",
+      "Lack of TODO/FIXME markers, often present in human development cycles.",
+      "Minimal or no explicit error handling detected (less critical for short snippets).",
+      "Very low comment density (0.00), potentially AI-generated."
+    ],
+    "factor_scores": {
+      "comment_density": {
+        "score": 0.8,
+        "details": "0.00 (0/1)"
+      },
+      "obvious_comments": {
+        "score": 0,
+        "details": ""
+      },
+      "todo_fixme_presence": {
+        "score": 0.7,
+        "details": "No TODO/FIXME found (common in human code)"
+      },
+      "comment_style_consistency": {
+        "score": 0,
+        "details": "No comments found to analyze style consistency."
+      },
+      "indentation_consistency": {
+        "score": 0,
+        "details": ""
+      },
+      "operator_spacing_consistency": {
+        "score": 0.7,
+        "details": "1/1 lines show potential operator spacing inconsistency (ratio: 1.00)."
+      },
+      "line_length_variance": {
+        "score": 0,
+        "details": ""
+      },
+      "generic_variable_names": {
+        "score": 0.1,
+        "details": "0/5 generic names (ratio: 0.00)"
+      },
+      "code_complexity_proxy": {
+        "score": 0.1,
+        "details": "1 complexity keywords / 84 total words (density: 0.012)"
+      },
+      "error_handling_presence": {
+        "score": 0.5,
+        "details": "No significant error handling keywords found."
+      }
+    }
+  }

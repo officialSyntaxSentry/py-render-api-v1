@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tab Switch Analysis Output",
+  "description": "Schema for AI output from tab switch analysis (tab.py)",
+  "type": "object",
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "description": "ID of the analyzed document"
+    },
+    "username": {
+      "type": "string",
+      "description": "Username associated with the tab switch event"
+    },
+    "problem_id": {
+      "type": ["string", "null"],
+      "description": "ID of the problem being worked on"
+    },
+    "problem_title": {
+      "type": ["string", "null"],
+      "description": "Title of the problem being worked on"
+    },
+    "platform": {
+      "type": ["string", "null"],
+      "description": "Platform where the event occurred (e.g., LeetCode, HackerRank)"
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "ISO timestamp of the event"
+    },
+    "suspicion_percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Percentage likelihood that the tab switch is suspicious (0-100)"
+    },
+    "raw_score": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Raw suspicion score before percentage calculation"
+    },
+    "max_possible_score": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Maximum possible suspicion score"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of reasons explaining the suspicion score"
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": ["string", "null"],
+              "description": "URL switched from"
+            },
+            "title": {
+              "type": ["string", "null"],
+              "description": "Title of the page switched from"
+            }
+          },
+          "required": ["url", "title"],
+          "additionalProperties": false,
+          "description": "Details about the source tab"
+        },
+        "to": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": ["string", "null"],
+              "description": "URL switched to"
+            },
+            "title": {
+              "type": ["string", "null"],
+              "description": "Title of the page switched to"
+            }
+          },
+          "required": ["url", "title"],
+          "additionalProperties": false,
+          "description": "Details about the destination tab"
+        }
+      },
+      "required": ["from", "to"],
+      "additionalProperties": false,
+      "description": "Detailed information about the tab switch"
+    }
+  },
+  "required": [
+    "document_id",
+    "username", 
+    "suspicion_percentage",
+    "raw_score",
+    "max_possible_score",
+    "reasons",
+    "details"
+  ],
+  "additionalProperties": false
+} 

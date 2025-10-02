@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Paste Event Analysis Output",
+  "description": "Schema for AI output from paste event analysis (paste.py)",
+  "type": "object",
+  "properties": {
+    "suspicion_percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Percentage likelihood that the paste event is suspicious (0-100)"
+    },
+    "factor_scores": {
+      "type": "object",
+      "properties": {
+        "length": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Score for content length analysis"
+        },
+        "is_code": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Score for code detection analysis"
+        },
+        "has_comments": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Score for presence of code comments"
+        },
+        "ai_markers": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Score for AI generation markers"
+        },
+        "code_density": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Score for code element density"
+        },
+        "excessive_blanks": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Score for excessive blank lines"
+        },
+        "non_code_text": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Score for natural language mixed with code"
+        }
+      },
+      "required": ["length", "is_code", "has_comments", "ai_markers", "code_density", "excessive_blanks", "non_code_text"],
+      "additionalProperties": false,
+      "description": "Scores for each analysis factor"
+    },
+    "is_likely_code_flag": {
+      "type": "boolean",
+      "description": "Boolean flag indicating if the content is likely code"
+    }
+  },
+  "required": ["suspicion_percentage", "factor_scores", "is_likely_code_flag"],
+  "additionalProperties": false
+} 

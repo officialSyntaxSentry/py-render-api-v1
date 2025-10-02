@@ -1,0 +1,23 @@
+{
+  "suspicious_percentage": 83.2,
+  "detailed_justification": [
+    "Overall Assessment: High likelihood of AI generation based on multiple factors.",
+    "[COMMENTS]: Excessive explanatory comments (15 comments for 52 lines), typical AI verbosity pattern.",
+    "[FORMATTING]: Perfect 2-space indentation consistency and proper semicolon usage throughout.",
+    "[NAMING]: Overly descriptive variable names like 'userInputValidationResult' and 'processedDataArray'.",
+    "[COMPLEXITY]: Use of modern ES6+ features (arrow functions, destructuring) in simple context suggests AI generation.",
+    "[CONSTRUCTS]: Found 2 very short functions potentially used only once, suggesting excessive abstraction.",
+    "[STRUCTURE]: Code defines structures (functions/classes) but lacks clear top-level execution or exports, potentially resembling an AI-generated example snippet.",
+    "[DEBUG] Raw Score: 28.67"
+  ],
+  "pattern_analysis": [
+    "EXCESSIVE_COMMENTS",
+    "PERFECT_FORMATTING",
+    "OVERLY_DESCRIPTIVE_NAMES",
+    "MODERN_SYNTAX_SIMPLE_CONTEXT",
+    "SHORT_SINGLE_USE_FUNCTION",
+    "ISOLATED_DEFINITIONS",
+    "CONSISTENT_STYLE",
+    "AI_LIKE_STRUCTURE"
+  ]
+} 

@@ -1,0 +1,37 @@
+{
+  "suspiciousness_percentage": 72.8,
+  "reasons": [
+    "High ratio (78%) of single-line comments, potentially AI-generated pattern.",
+    "Perfect indentation consistency (100%) suggests automated formatting.",
+    "Average line length (89.3) exceeds common limits (80).",
+    "High ratio (31%) of generic variable names (e.g., i, temp, data) detected.",
+    "High density (0.045) of basic complexity keywords (if, for, while), potentially indicating verbose or simplistic AI logic.",
+    "Lack of explicit error handling (try/catch, assert, etc.), potentially AI 'happy path' code."
+  ],
+  "factor_scores": {
+    "single_line_comment_ratio": {
+      "score": 0.6,
+      "details": "14/18 comments are single-line (ratio: 0.78)"
+    },
+    "indentation_consistency": {
+      "score": 0.8,
+      "details": "Perfect 4-space indentation throughout"
+    },
+    "line_length_variance": {
+      "score": 0.4,
+      "details": "Average line length (89.3) exceeds common limits (80)"
+    },
+    "generic_variable_names": {
+      "score": 0.7,
+      "details": "8/26 generic names (ratio: 0.31)"
+    },
+    "code_complexity_proxy": {
+      "score": 0.4,
+      "details": "12 complexity keywords / 267 total words (density: 0.045)"
+    },
+    "error_handling_presence": {
+      "score": 0.8,
+      "details": "No significant error handling keywords found."
+    }
+  }
+} 

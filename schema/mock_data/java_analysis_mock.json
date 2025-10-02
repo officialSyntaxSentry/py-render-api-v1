@@ -1,0 +1,44 @@
+{
+  "suspicious_percentage": 65.3,
+  "reasons": [
+    "High ratio (85%) of single-line comments, potentially AI pattern.",
+    "Perfect adherence to Java naming conventions with consistent camelCase.",
+    "Low variation in method name length (StdDev: 1.2), potentially AI pattern.",
+    "High ratio of generic names like 'data', 'temp', 'value' (23.1%), suggestive of AI.",
+    "Detected 3 instances of consecutive identical code lines, potential AI boilerplate.",
+    "High ratio (4.2%) of potential 'magic numbers' (uncommented literals), could be AI or less careful human."
+  ],
+  "factors": {
+    "comments": 0.45,
+    "formatting": 0.78,
+    "naming": 0.62,
+    "structure": 0.38
+  },
+  "detailed_metrics": {
+    "comments": {
+      "total_comments": 18,
+      "single_line_comments": 15,
+      "multi_line_comments": 3,
+      "comment_density": 0.28,
+      "avg_comment_length": 42.5
+    },
+    "formatting": {
+      "indentation_consistency": 1.0,
+      "line_length_variance": 0.15,
+      "spacing_consistency": 0.95,
+      "brace_style_consistency": 1.0
+    },
+    "naming": {
+      "method_count": 8,
+      "avg_method_name_length": 12.3,
+      "method_name_length_stddev": 1.2,
+      "generic_name_count": 6,
+      "generic_name_ratio": 0.231
+    },
+    "structure": {
+      "consecutive_duplicate_lines": 3,
+      "potential_magic_numbers": 7,
+      "magic_number_ratio": 0.042
+    }
+  }
+} 
